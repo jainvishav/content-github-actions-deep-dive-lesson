@@ -8,7 +8,7 @@ def lambda_handler(event, context):
     Returns:
         string: greeting response
     """
-    print('Starting functions\n---------------------------------------------'
+    print('Starting functions\n---------------------------------------------')
 
     if event["input"] == "Hello":
 
@@ -16,4 +16,4 @@ def lambda_handler(event, context):
 
     else:
 
-        raise
+        raise Exception("Input was not 'Hello'")  # Raising a generic exception
