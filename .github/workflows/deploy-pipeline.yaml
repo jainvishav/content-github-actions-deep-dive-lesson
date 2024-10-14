@@ -105,7 +105,8 @@ jobs:
         run: |
             aws lambda update-function-code \
             --function-name vish-lambda \
-            --zip-file s3://vishcicdbucket01/${{github.sha}}.zip \
+            --s3-bucket vishcicdbucket01 \
+            --s3-key ${{github.sha}}.zip \
             --publish
 
 
