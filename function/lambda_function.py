@@ -13,7 +13,11 @@ def lambda_handler(event, context):
     if event["input"] == "Hello":
 
         return "World"
+    
+    if event["input"] == "Hi":
+
+        return "Vishav"
 
     else:
 
-        raise Exception("Input was not 'Hello'")  # Raising a generic exception
+        raise Exception("Input was not 'Hello' or 'Hi' ")  # Raising a generic exception
