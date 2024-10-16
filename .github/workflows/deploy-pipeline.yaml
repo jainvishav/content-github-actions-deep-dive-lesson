@@ -143,8 +143,8 @@ jobs:
           aws-region: ${{secrets.AWS_REGION}}
       - name: S3 create-function
         run: |
-            aws s3 rm s3://vish-test-bucketcicd01 --recursive
-            aws s3 rm s3://vish-test-bucketcicd02 --recursive
+            aws s3 rb s3://vish-test-bucketcicd01 --recursive
+            aws s3 rb s3://vish-test-bucketcicd02 --recursive
 
 
 
