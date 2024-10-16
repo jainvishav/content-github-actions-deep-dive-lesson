@@ -18,6 +18,10 @@ def lambda_handler(event, context):
 
         return "Vishav"
 
+    if event["input"] == "Hi":
+        
+        return "Hi There"
+
     else:
 
         raise Exception("Input was not 'Hello' or 'Hi' ")  # Raising a generic exception
